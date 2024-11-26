@@ -23,6 +23,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         screen.fill(color=(0,0,0))
+        player.update(dt)
         player.draw(screen)
         pygame.display.flip()
         dt = clock.tick(60) / 1000 # it will pause the game loop until 1/60 second has passed
